@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Monoton&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!-- link from font awesome -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head> 
 <body>
     <!-- Overall div starts here -->
@@ -25,11 +26,12 @@
             <div class="right-nav">
                 <button type="button">Post Your Property</button>
                 <div class="right-nav-text">
-                    <p>Sign Up</p>
-                    <p>Login</p>
+                    <a onclick="myfun()">Sign Up</a>
+                    <a>Login</a>
                     <p><i class="fa-solid fa-bell"></i></p>
-                    <p><i class="fa-solid fa-bars"></i>Menu</p>
+                    
                 </div>
+                <p class="main-icon"><i class="fa-solid fa-bars" onclick='myfun()'></i>Menu</p>
             </div>
         </nav>
         <!-- Nav bar ends here -->
@@ -51,12 +53,13 @@
              </div>
             <!-- search bar starts here -->
             <div class="search-div">
+                <div>
                 <div class="search-div-top">
                     <span class="search-rent">Rent</span>
                     <span>Buy</span>
                 </div>
                 <div class="search-div-bottom">
-                    <select>
+                    <select class="city-search">
                         <option value="City">City</option>
                     </select>
                     <select>
@@ -66,6 +69,7 @@
                         <option value="Location">Property Type</option>
                     </select>
                     <button class="search-input" type="button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                </div>
                 </div>
             </div>
             <!-- search bar ends here -->
@@ -135,11 +139,21 @@
                  <h1 class="Rv-head Rv-head1">Craft Your Ideal Shops</h1>
                  <p class="slide-text">From bustling malls to cozy street-side shops — find the space that fits your business. Choose the perfect location and start building your success today.</p>
                 <div class="sliders">
-                    <div class="slider-card slider-card1"></div>
-                    <div class="slider-card slider-card1"></div>
-                    <div class="slider-card"></div>
-                    <div class="slider-card slider-card2"></div>
-                    <div class="slider-card slider-card2"></div>
+                    <div class="slider-card slider-card1">
+                        <img src="./Images/Recommend-2.png" alt="img">
+                    </div>
+                    <div class="slider-card slider-card1">
+                        <img src="./Images/Recommend-10.png" alt="img">
+                    </div>
+                    <div class="slider-card" id="mainImg">
+                        <img src="./Images/Recommend-3.png" alt="img">
+                    </div>
+                    <div class="slider-card slider-card2">
+                        <img src="./Images/Recommend-7.png" alt="img">
+                    </div>
+                    <div class="slider-card slider-card2">
+                        <img src="./Images/Recommend-8.png" alt="img">
+                    </div>
                     
                 </div>
             </div>
@@ -405,13 +419,27 @@
     <div class="feed-circle"></div>
     </div>
     <div class="wrapper-circle">
-    <div class="feed-circle2"></div>
-    <div class="feed-circle3"></div>
-    <div class="feed-circle4"></div>
-    <div class="feed-circle1"></div>
-    <div class="feed-circle4"></div>
-    <div class="feed-circle3"></div>
-    <div class="feed-circle2"></div>
+    <div class="feed-circle2">
+        <img src="./Images/feed4.jpg" alt="feed">
+    </div>
+    <div class="feed-circle3">
+        <img src="./Images/feed3.jpg" alt="feed">
+    </div>
+    <div class="feed-circle4">
+        <img src="./Images/feed2.jpg" alt="feed">
+    </div>
+    <div class="feed-circle1">
+        <img src="./Images/feed1.jpg" alt="feed">
+    </div>
+    <div class="feed-circle4">
+        <img src="./Images/feed5.jpg" alt="feed">
+    </div>
+    <div class="feed-circle3">
+        <img src="./Images/feed6.jpg" alt="feed">
+    </div>
+    <div class="feed-circle2">
+        <img src="./Images/feed7.jpg" alt="feed">
+    </div>
 </div>
     <div class="feedback">
         <h2>Sri Ram</h2>
@@ -447,5 +475,6 @@
  <!-- footer ends here -->
     </div>
     <!-- Overall div ends here -->
+     <script src="./script.js"></script>
 </body>
 </html>
