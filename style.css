@@ -76,6 +76,7 @@ nav{
         justify-content: center;
         align-items: center;
         top: 100px;
+        right: -360px;
         right: 0px;
 
     }
@@ -1007,6 +1008,7 @@ nav{
 }
 .feed-circle1 img:hover{
     border: 10px solid gold;
+    transition: all 1s;
 }
 .feed-circle2{
     height: 80px;

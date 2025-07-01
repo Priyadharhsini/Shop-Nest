@@ -4,67 +4,72 @@ function myfun(){
 }
 document.querySelector('.main-icon').addEventListener('click',myfun());
 
+// customer feedback script
+  const testimonials = [
+    {
+      image: "./Images/feed1.jpg",
+      name: "Sri Ram",
+      role: "UI/UX Designer",
+      text: "Code99 has been a game-changer for me! The teaching style is super practical, and the mentors really care about making sure we understand the concepts. I especially loved how we worked on real-world projects — it made me feel confident and industry-ready. The environment is also really positive and collaborative. Highly recommend for anyone serious about building a career in tech!"
+    },
+    {
+      image: "./Images/feed5.jpg",
+      name: "Ananya Mehra",
+      role: "Frontend Developer",
+      text: "The mentorship and hands-on projects helped me improve my coding skills significantly. I enjoyed working in teams and building real apps!"
+    },
+    {
+      image: "./Images/feed6.jpg",
+      name: "Rahul Nair",
+      role: "Software Engineer",
+      text:"From zero to job-ready! Code99's approach made learning feel easy and enjoyable. Loved the project-based training!"
+    },
+     {
+      image: "./Images/feed7.jpg",
+      name: "Ananya Mehra",
+      role: "Frontend Developer",
+      text: "The mentorship and hands-on projects helped me improve my coding skills significantly. I enjoyed working in teams and building real apps!"
+    },
+    {
+      image: "./Images/feed2.jpg",
+      name: "Rahul Nair",
+      role: "Software Engineer",
+      text:"From zero to job-ready! Code99's approach made learning feel easy and enjoyable. Loved the project-based training!"
+    },
+    {
+      image: "./Images/feed3.jpg",
+      name: "Ananya Mehra",
+      role: "Frontend Developer",
+      text: "The mentorship and hands-on projects helped me improve my coding skills significantly. I enjoyed working in teams and building real apps!"
+    },
+    {
+      image: "./Images/feed4.jpg",
+      name: "Rahul Nair",
+      role: "Software Engineer",
+      text:"From zero to job-ready! Code99's approach made learning feel easy and enjoyable. Loved the project-based training!"
+    }
+  ];
 
-// swapping images
+  let index = 0;
 
-  // const testimonials = [
-  //   {
-  //     img: "./Images/feed1.jpg",
-  //     name: "Sri Ram",
-  //     role: "UI/UX Designer",
-  //     text: "Code99 has been a game-changer for me! The teaching style is super practical, and the mentors really care about making sure we understand the concepts. I especially loved how we worked on real-world projects — it made me feel confident and industry-ready. The environment is also really positive and collaborative. Highly recommend for anyone serious about building a career in tech!"
-  //   },
-  //   {
-  //     img: "./Images/feed2.jpg",
-  //     name: "Aditi Sharma",
-  //     role: "Frontend Developer",
-  //     text: "The mentorship and real-world projects gave me confidence in my skills. The team spirit and support were excellent!"
-  //   },
-  //   {
-  //     img: "./Images/feed3.jpg",
-  //     name: "John Doe",
-  //     role: "Software Engineer",
-  //     text: "The program is very immersive and practical. It helped me land a job within 2 months of completing the course!"
-  //   },
-  //   {
-  //     img: "./Images/feed4.jpg",
-  //     name: "Nisha Verma",
-  //     role: "Full Stack Developer",
-  //     text: "Every module was hands-on, and the instructors made sure we stayed on track. Loved the community too!"
-  //   }
-    // Add more testimonials if needed
-  // ];
+  function showTestimonial(i) {
+    const testimonial = testimonials[i];
+    document.getElementById("feed-circle1").src = testimonial.image;
+    document.getElementById("feed-circle1").style.border = "10px solid gold";
+    document.getElementById("customerName").innerText = testimonial.name;
+    document.getElementById("customerRole").innerText = testimonial.role;
+    document.getElementById("testimonialText").innerText = testimonial.text;
+  }
 
-  // let currentIndex = 0;
+  function nextTestimonial() {
+    index = (index + 1) % testimonials.length;
+    showTestimonial(index);
+  }
 
-  // const nameEl = document.querySelector('.feedback h2');
-  // const roleEl = document.querySelector('.feedback span');
-  // const textEl = document.querySelector('.feedback p');
-  // const imageEls = document.querySelectorAll('.wrapper-circle img');
+  function prevTestimonial() {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(index);
+  }
 
-  // function updateTestimonial(index) {
-  //   const testimonial = testimonials[index];
-  //   nameEl.textContent = testimonial.name;
-  //   roleEl.textContent = testimonial.role;
-  //   textEl.textContent = testimonial.text;
-
-    // Optional: Highlight the current image (if desired)
-  //   imageEls.forEach(img => img.classList.remove('active'));
-  //   if (imageEls[index]) {
-  //     imageEls[index].classList.add('active');
-  //   }
-  // }
-
-  // document.querySelector('.fa-angle-right').addEventListener('click', () => {
-  //   currentIndex = (currentIndex + 1) % testimonials.length;
-  //   updateTestimonial(currentIndex);
-  // });
-
-  // document.querySelector('.fa-angle-left').addEventListener('click', () => {
-  //   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-  //   updateTestimonial(currentIndex);
-  // });
-
-  // // Initial load
-  // updateTestimonial(currentIndex);
-
+  // Initialize first testimonial
+  window.onload = () => showTestimonial(index);
