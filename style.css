@@ -235,9 +235,9 @@ nav{
     overflow-x: hidden;
     overflow-y: hidden;
 }
-@media screen and(min-width:570px) and (max-width:655px) {
+@media only screen and(min-width:570px) and (max-width:655px) {
     .hero{
-        flex-direction: column;
+        flex-direction: column!important;
     }
     .hero-left{
         width: 100%!important;
@@ -1335,6 +1335,30 @@ nav{
 .fa-angle-right{
     top:-80px;
     right: -380px;
+}
+
+
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.slide-from-left {
+  animation: slideInFromLeft 0.3s ease-in-out;
+}
+
+.slide-from-right {
+  animation: slideInFromRight 0.3s ease-in-out;
+}
+#activeImage img {
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 footer{
     width: 95%;
